@@ -115,6 +115,7 @@ ul#deck > li {
 .modal {
   display: none;
   position: fixed;
+  margin: auto;
   z-index: 1;
   top: 0;
   height: 100%;
@@ -131,7 +132,8 @@ ul#deck > li {
   background-color: #f4f4f4;
   border-radius: 14px;
   margin: 20% auto;
-  width: 70%;
+  max-width: 680px;
+  width: 100%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalOpen;
   animation-duration: 1.5s;
@@ -165,7 +167,7 @@ ul#deck > li {
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   background: linear-gradient(-160deg, #02ccba 0%, #aa7ecd 100%);
   margin: 0;
@@ -180,7 +182,21 @@ ul#deck > li {
   margin: auto;
 }
 
+.restartBtn {
+  padding: 10px;
+  margin: 0;
+  border-radius: 7px;
+  background: #2e3d49;
+  color: white;
+  margin: auto;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
 .closeBtn {
+  padding: 10px;
+  margin: 0;
   border-radius: 7px;
   background: #2e3d49;
   color: white;

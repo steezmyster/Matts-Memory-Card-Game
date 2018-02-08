@@ -37,6 +37,7 @@ const cardsArray = [
  //________________________________________RUN AT START_______________________________________________//
 //Create game layout
  newBoard();
+ modal.classList.add('show');
 // Set the .moves html content = to movesCount
 document.querySelector('#resetbutton').innerHTML = '<i class="fa fa-repeat" onclick="newBoard()"></i>';
 //Listen for outside click, closes pop up window
