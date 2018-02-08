@@ -43,9 +43,7 @@ h1 {
     font-weight: 300;
 }
 
-/*
- * Styles for the deck of cards
- */
+/** Card deck styles **/
 
  #deck {
      width: 660px;
@@ -76,14 +74,12 @@ ul#deck > li {
       box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
   }
 
+
+/** Score panel styles **/
   .outline {
       text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
       color: #FFF;
   }
-
-/*
- * Styles for the Score Panel
- */
 
 .score-panel {
     text-align: left;
@@ -103,7 +99,98 @@ ul#deck > li {
     display: inline-block;
 }
 
+.timeCounter {
+  list-style: none;
+  margin-left: 10px;
+  float: right;
+  display: inline-block;
+}
+
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+
+/** Pop up styles **/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.show{
+  display: block;
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  border-radius: 14px;
+  margin: 20% auto;
+  width: 70%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalOpen;
+  animation-duration: 1.5s;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.modal-header {
+  border-top-right-radius: 14px;
+  border-top-left-radius: 14px;
+  background: linear-gradient(-160deg, #02ccba 0%, #aa7ecd 100%);
+  padding: 15px;
+  color: white;
+}
+
+.modal-body h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #2e3d49;
+  color: white;
+  text-align: center;
+}
+
+.modal-footer {
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: linear-gradient(-160deg, #02ccba 0%, #aa7ecd 100%);
+  margin: 0;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.trophy {
+  width: 180px;
+  height: 180px;
+  margin: auto;
+}
+
+.closeBtn {
+  border-radius: 7px;
+  background: #2e3d49;
+  color: white;
+  margin: auto;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+@keyframes modalOpen {
+  from {opacity: 0}
+  to {opacity: 1}
 }
